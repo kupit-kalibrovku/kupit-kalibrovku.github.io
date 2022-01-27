@@ -1,0 +1,187 @@
+*
+    box-sizing: border-box
+body
+    font-family: sans-serif
+    padding: 0
+    margin: 0
+a
+    text-decoration: none
+header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px
+    text-align: center
+    position: fixed
+    width: 100%
+    background-color: #fff
+    border-bottom: 3px solid red
+    z-index: 999
+    a
+        color: #000
+.author
+    display: flex
+    align-items: center
+    img
+        margin-right: 10px
+        border-radius: 50%
+.name
+    display: flex
+    flex-direction: column
+    text-align: left
+    .work-time
+        font-size: 12px
+    img
+        max-width: 50px
+.email, .phone, .whatsapp
+    display: flex
+    align-items: center
+    img
+        max-height: 20px
+        margin-right: 10px
+h1
+    font-size: 20px
+.map
+    opacity: 1
+    height: 400px
+    width: 100%
+    margin-top: 20px
+    border: 0
+    transition: .2s
+    &.active
+        // display: none
+        height: 0
+        visibility: hidden
+        opacity: 0
+    &-show
+        font-weight: bold
+        text-decoration: underline
+        cursor: pointer
+.container
+    max-width: 1200px
+    margin: auto
+    
+main
+    padding-top: 100px
+    text-align: center
+.products
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    a
+        width: 280px
+        margin: 10px
+    .info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        width: 280px
+        min-height: 260px
+        padding: 20px 0
+        color: #000
+        margin: auto
+        position: relative
+        img
+            max-width: 200px
+            margin: auto
+            padding-top: 20px
+    &-list
+        // padding: 10px
+        // margin-top: 20px
+        // border-top: 1px dashed red
+        // border-bottom: 1px dashed red
+        // background-color: #eee
+        a
+            color: red
+        li
+            margin-bottom: 10px
+        a
+            margin-left: 10px
+    .buy
+        max-width: 250px
+        margin: auto
+ul
+    list-style: none
+    padding: 0
+    li
+        margin-bottom: 5px
+.advantages
+    display: flex
+    flex-wrap: wrap
+.advantage
+    width: 400px
+    min-height: 200px
+    padding: 20px
+    margin: auto
+footer
+    text-align: center
+    margin-bottom: 50px
+    ul
+        font-size: 12px
+.buy
+    display: flex
+    justify-content: center
+    background-color: red
+    padding: 20px 50px
+    margin-top: 50px
+    color: #fff
+    transition: .2s
+.block
+    padding: 0 20px
+@media(hover: hover) and (pointer: fine)
+    .products
+        &-list
+            a:hover
+                text-decoration: underline
+    .buy:hover
+        background-color: darken(red, 20%)
+    header
+        a:hover
+            text-decoration: underline
+    
+@media (max-width: 1250px)
+    .container
+        padding: 20px
+        max-width: 800px
+@media (max-width: 1050px)
+    main
+        padding-top: 150px
+    header
+        flex-wrap: wrap
+        .block
+            width: 50%
+            &:nth-child(3), &:nth-child(4)
+                margin-top: 20px
+    .toggle
+        display: block            
+    .phone, .whatsapp
+        &.active
+            display: flex
+@media (max-width: 800px)
+    main
+        padding-top: 200px
+    header
+        .block
+            display: flex
+            justify-content: center
+            width: 100%
+            &:nth-child(2)
+                margin-top: 20px
+@media (max-width: 650px)
+    .popular-products
+        font-size: 14px
+@media (max-width: 500px)
+    main
+        padding-top: 150px
+    header
+        padding: 10px 5px
+        .block
+            padding: 0 5px
+            &:nth-child(2), &:nth-child(3), &:nth-child(4)
+                margin-top: 20px
+    .name
+        font-size: 14px
+    .author
+        img
+            max-width: 30px
